@@ -1,3 +1,4 @@
+source "http://gemcutter.org"
 #
 # Required on every environment
 #
