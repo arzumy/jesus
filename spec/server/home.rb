@@ -2,10 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe "The home page" do
   include Rack::Test::Methods
-
-  def app
-    @app ||= Sinatra.new Jesus::Server
-  end
+  include Jesus::Spec
 
   it "should respond to /" do
     get '/'
