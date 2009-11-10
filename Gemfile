@@ -10,3 +10,4 @@ gem "god"
 # Required only for tests
 #
 gem "rspec", :only => :testing
+gem "rack-test", :only => :testing
