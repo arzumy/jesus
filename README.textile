@@ -1,0 +1,9 @@
+h1. Jesus
+
+Jesus is a web interface to "god":http://github.com/mojombo/god
+It allows you to see the process and monitor/unmonitor them.
+
+h2. Development state
+
+It's still under pre alpha. So feel free to contribute.
+But it's not ready for use.
