@@ -11,3 +11,4 @@ gem "god"
 #
 gem "rspec", :only => :testing
 gem "rack-test", :only => :testing
+gem "mocha", :only => :testing
