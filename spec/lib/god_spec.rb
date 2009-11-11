@@ -12,9 +12,7 @@ describe "God interface" do
     end
 
     it 'should fail because the server is not connected' do
-      lambda {
-        @server.status
-      }.should raise_error DRb::DRbConnError
+      @server.status.should be_nil
     end
   end
   
