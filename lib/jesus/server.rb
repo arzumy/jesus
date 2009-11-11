@@ -15,6 +15,7 @@ module Jesus
     # Displays the list of the process
     #
     get '/' do
+      @status = Jesus::Interface.new.status
       erb_template 'home'
     end
   end
