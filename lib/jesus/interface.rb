@@ -8,7 +8,7 @@ module Jesus
     attr_reader :server
     
     def initialize
-      @server = DRbObject.new(nil, God::Socket.socket(17165))
+        @server = DRbObject.new(nil, God::Socket.socket(17165))
     end
     
     
@@ -16,7 +16,11 @@ module Jesus
     # We retrieve the processes by group
     #
     def status
-      statuses = server.status
+      begin
+        statuses = server.status
+      rescue
+        return nil
+      end
       groups = Hash.new
       
       statuses.each do |name, status|

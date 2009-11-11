@@ -16,7 +16,7 @@ module Jesus
     #
     get '/' do
       @status = Jesus::Interface.new.status
-      erb_template 'home'
+      erb_template @status.nil? ? :error : :home
     end
   end
 end
