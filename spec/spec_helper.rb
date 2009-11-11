@@ -2,6 +2,7 @@ require 'vendor/gems/environment'
 require 'sinatra'
 require 'rack/test'
 require 'spec'
+require 'mocha'
 require 'spec/autorun'
 require 'spec/interop/test'
 

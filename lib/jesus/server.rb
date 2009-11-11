@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra_more/render_plugin'
+require 'jesus/interface'
 
 module Jesus
   class Server < Sinatra::Base
