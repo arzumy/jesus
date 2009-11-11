@@ -1,0 +1,96 @@
+/*
+* The global styles
+*/
+html {
+	background:#efefef;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:13px;
+}
+body {
+	padding:0;
+	margin:0;
+}
+
+/*
+* The page header
+*/
+#header {
+	background:#000;
+	padding: 8px 5% 0 5%;
+	border-bottom:1px solid #444;
+	border-bottom:5px solid #ce1212;
+}
+#header ul {
+	margin: 0px;
+	padding: 0px;
+}
+#header ul li {
+	display:inline;
+}
+#header ul li a {
+	color:#fff;
+	text-decoration:none;
+	margin: 0px 10px 0px 0px;
+	display:inline-block;
+	padding:8px;
+	
+	-webkit-border-top-right-radius:6px;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topright:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-right-radius:6px;
+	border-top-left-radius:6px;
+}
+#header ul li a:hover {
+	background:#333;
+}
+#header ul li.current a {
+	background:#ce1212;
+	font-weight:bold;
+	color:#fff;
+}
+
+/*
+* The page itself
+*/
+#page {
+	padding: 15px;
+}
+
+/*
+* The common page info div
+*/
+div.page_info h1 {
+	color: #FF0000;
+	margin: 0px;
+	text-align: center;
+}
+div.page_info p {
+	text-align: left;
+	padding: 0px 15px;
+	color: #6F6F6F;
+}
+div.page_info {
+	width: 700px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #D0CFFF;
+	border: 1px solid #0300FF;
+}
+
+/*
+* The home page (processes  list)
+*/
+div.group h2 { margin: 5px 30px; }
+div.group ul {
+	list-style-type: none;
+	padding: 0px;
+}
+div.group li {
+	border: 1px solid #CCC;
+	margin: 5px 0px;
+	padding: 10px;
+}
+
+div.group li.up { background-color: #BFFFC8; }
+div.group li.unmonitored { background-color: #FFBFBF; }

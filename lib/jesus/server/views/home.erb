@@ -1,8 +1,18 @@
+<div class="page_info">
+	<h1>Processes</h1>
+	<p>
+		In the list below, you see the processes monitored by God.<br />
+		If the process is green, it mean it's launched. If it's in red then it's not currently being monitored.
+	</p>
+</div>
+
 <% @status.each_pair do |group,processes| %>
-	<h2><%= group %></h2>
-	<ul>
-		<% processes.each do |process| %>
-			<li class="<%= process[1][:state] %>"><%= process[0] %></li>
-		<% end %>
-	</ul>
+	<div class="group">
+		<h2><%= group %></h2>
+		<ul>
+			<% processes.each do |process| %>
+				<li class="<%= process[1][:state] %>"><%= process[0] %></li>
+			<% end %>
+		</ul>
+	</div>
 <% end %>
