@@ -4,6 +4,7 @@ timeout 30
  
 # Listen on a Unix data socket
 listen APP_ROOT + '/tmp/jesus.sock', :backlog => 2048
+pid APP_ROOT + '/tmp/jesus.pid'
  
 ##
 # REE
