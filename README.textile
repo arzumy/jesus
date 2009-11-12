@@ -3,21 +3,23 @@ h1. Jesus
 Jesus is a web interface to "god":http://github.com/mojombo/god
 It allows you to see the process and monitor/unmonitor them.
 
+!http://cloud.github.com/downloads/dmathieu/jesus/jesus.png(Screenshot 0.0.1)!
+
 h2. Installation
 
 To install the application you first need to have "bundler":http://github.com/wycats/bundler installed on your machine.
 Once that is done, clone the project in the directory of your choice.
 
-    git clone git://github.com/dmathieu/jesus.git
+    @git clone git://github.com/dmathieu/jesus.git@
 
 Then you should install the dependencies.
 
-    gem bundle
+    @gem bundle@
 
 You now have Jesus available on your machine. Start your god process.
 And start Jesus.
 
-    god -c /path/to/your/god.config
+    bc. god -c /path/to/your/god.config
     rackup
 
 Note: Jesus and God should be started with the same user. Otherwise, Jesus won't be able to get access to the God informations.
