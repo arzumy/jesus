@@ -48,7 +48,11 @@ module Jesus
     # By default, gets all the logs
     #
     def log(name, start=Time.at(0))
-      server.running_log(name, start).split("\n")
+      begin
+        server.running_log(name, start).split("\n")
+      rescue
+        nil
+      end
     end
   end
 end
