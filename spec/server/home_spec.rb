@@ -8,4 +8,9 @@ describe "The home page" do
     get '/'
     last_response.should be_ok
   end
+  
+  it 'should execute the command' do
+    post '/command/start/jesus'
+    last_response.should be_redirect
+  end
 end

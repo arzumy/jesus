@@ -18,5 +18,10 @@ module Jesus
       @status = Jesus::Interface.new.status
       erb_template @status.nil? ? :error : :home
     end
+    
+    post '/command/:command/:process' do
+      @command = Jesus::Interface.new.command(params[:command], params[:process])
+      redirect '/'
+    end
   end
 end
