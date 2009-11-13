@@ -39,5 +39,9 @@ module Jesus
         return nil
       end
     end
+    
+    def log(name, start=Time.at(0))
+      server.running_log(name, start).split("\n")
+    end
   end
 end
