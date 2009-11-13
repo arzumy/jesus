@@ -33,7 +33,11 @@ module Jesus
     
     
     def command(command, name)
-      server.control(name, command)
+      begin
+        server.control(name, command)
+      rescue
+        return nil
+      end
     end
   end
 end
