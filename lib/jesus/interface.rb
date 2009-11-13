@@ -31,7 +31,10 @@ module Jesus
       groups
     end
     
-    
+    #
+    # We execute a specific command to god
+    # Could be "start", "stop", "restart", "quit", "terminate"
+    #
     def command(command, name)
       begin
         server.control(name, command)
@@ -40,6 +43,10 @@ module Jesus
       end
     end
     
+    #
+    # Gets the god's logs for one process since some time
+    # By default, gets all the logs
+    #
     def log(name, start=Time.at(0))
       server.running_log(name, start).split("\n")
     end
