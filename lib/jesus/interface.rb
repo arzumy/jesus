@@ -30,5 +30,10 @@ module Jesus
       end
       groups
     end
+    
+    
+    def command(command, name)
+      server.control(name, command)
+    end
   end
 end
