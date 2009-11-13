@@ -9,6 +9,17 @@ describe "The home page" do
     last_response.should be_ok
   end
   
+  it 'should display a process logs' do
+    class Jesus::Interface
+      def log(name); ['First Log Line', 'Second Log Line']; end
+    end
+    
+    get '/logs/test'
+    last_response.should be_ok
+    last_response.should match(/<h1>Logs for test<\/h1>/)
+    last_response.should match(/<textarea>First Log Line\r\nSecond Log Line<\/textarea>/)
+  end
+  
   it 'should execute the command' do
     post '/command/start/jesus'
     last_response.should be_redirect
