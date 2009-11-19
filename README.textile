@@ -12,6 +12,10 @@ Once that is done, clone the project in the directory of your choice.
 
     @git clone git://github.com/dmathieu/jesus.git@
 
+Or using the gem.
+
+    @gem install jesus --source http://gemcutter.org
+
 Then you should install the dependencies.
 
     @gem bundle@

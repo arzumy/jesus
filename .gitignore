@@ -1,5 +1,6 @@
 *.kpf
 *.tmproj
+pkg/*
 .DS_Store
 vendor/gems/*
 bin/*
