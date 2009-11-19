@@ -14,10 +14,6 @@ describe "God interface" do
     it 'should fail because the server is not connected' do
       @server.status.should be_nil
     end
-    
-    it 'should retrieve the logs' do
-      p @server.log('Delayed Jobs')
-    end
   end
   
   describe 'with mocking' do
