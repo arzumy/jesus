@@ -58,6 +58,18 @@ body {
 }
 
 /*
+ * The flash message
+*/
+#flash {
+	width: 700px;
+	text-align: center;
+	margin: 10px auto;
+  padding: 5px;
+	background-color: #FFCFD1;
+	border: 1px solid #FF000A;
+}
+
+/*
 * The common page info div
 */
 div.page_info h1 {

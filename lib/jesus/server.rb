@@ -12,6 +12,7 @@ module Jesus
     set :views, "#{dir}/server/views"
     set :public, "#{dir}/server/public"
     set :static, true
+    enable :sessions
     
     #
     # The home
@@ -28,6 +29,14 @@ module Jesus
     get '/logs/:process' do
       @log = Jesus::Interface.new.log(params[:process])
       erb_template @log.nil? ? :error : :log
+    end
+    
+    #
+    # Displays every page logs
+    #
+    get '/logs' do
+      flash(:notice, 'You currently can not display all the logs. You should select a process first.')
+      redirect '/'
     end
     
     #

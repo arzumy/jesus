@@ -47,7 +47,7 @@ module Jesus
     # Gets the god's logs for one process since some time
     # By default, gets all the logs
     #
-    def log(name, start=Time.at(0))
+    def log(name=nil, start=Time.at(0))
       begin
         server.running_log(name, start).split("\n")
       rescue
