@@ -11,7 +11,13 @@
 		<h2><%= group %></h2>
 		<ul>
 			<% processes.each do |process| %>
-				<li class="<%= process[1][:state] %>"><%= process[0] %></li>
+				<li class="<%= process[1][:state] %>">
+            <%= process[0] %>
+            
+            <ul class="links">
+                <li><a href="/logs/<%= process[0] %>">View Logs</a></li>
+            </ul>
+        </li>
 			<% end %>
 		</ul>
 	</div>

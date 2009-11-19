@@ -94,3 +94,13 @@ div.group li {
 
 div.group li.up { background-color: #BFFFC8; }
 div.group li.unmonitored { background-color: #FFBFBF; }
+
+ul.links {
+    list-style-type: none;
+    margin: 0px;
+    float: right;
+}
+ul.links li {
+    display: inline;
+    border: 0px;
+}
