@@ -1,3 +1,4 @@
+require 'vendor/gems/environment'
 require 'spec/rake/spectask'
 
 task :default => :spec
