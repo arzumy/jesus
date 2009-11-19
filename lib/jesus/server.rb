@@ -1,11 +1,14 @@
 require 'sinatra/base'
 require 'sinatra_more/render_plugin'
 require 'jesus/interface'
+require 'jesus/server/helpers'
 
 module Jesus
   class Server < Sinatra::Base
     dir = File.dirname(File.expand_path(__FILE__))
     register SinatraMore::RenderPlugin
+    include Jesus::Helpers
+    
     set :views, "#{dir}/server/views"
     set :public, "#{dir}/server/public"
     set :static, true
