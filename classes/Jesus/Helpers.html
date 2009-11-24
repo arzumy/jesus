@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Jesus::Helpers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+    <script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>     
+    <div class="banner">
+        <h1>
+            <span class="type">Module</span> 
+            Jesus::Helpers 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/jesus/server/helpers_rb.html">lib/jesus/server/helpers.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+    
+        <dt>C</dt>
+        <dd>
+            <ul>
+                
+                <li><a href="#M000004">class_if_current</a></li>
+                
+            </ul>
+        </dd>
+    
+        <dt>F</dt>
+        <dd>
+            <ul>
+                
+                <li><a href="#M000007">flash</a>,</li>
+                
+                <li><a href="#M000006">flash_tag</a></li>
+                
+            </ul>
+        </dd>
+    
+        <dt>T</dt>
+        <dd>
+            <ul>
+                
+                <li><a href="#M000005">tab</a></li>
+                
+            </ul>
+        </dd>
+    
+    </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+            <div class="sectiontitle">Instance Public methods</div>
+            
+            <div class="method">
+                <div class="title" id="M000004">
+                    
+                    <a name="M000004"></a><b>class_if_current</b>(link)
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000004_source')" id="l_M000004_source">show</a>
+                        
+                        | <a href="http://github.com/dmathieu/jesus/blob/6e71ad615a9291bacddbe242dc3750203524007a/lib/jesus/server/helpers.rb#L3" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000004_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/jesus/server/helpers.rb, line 3</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_if_current</span>(<span class="ruby-identifier">link</span>)
+      <span class="ruby-identifier">link</span> = <span class="ruby-value str">'^/$'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">link</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'/'</span>
+      <span class="ruby-value str">'class=&quot;current&quot;'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">path_info</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">link</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000007">
+                    
+                    <a name="M000007"></a><b>flash</b>(type, message)
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000007_source')" id="l_M000007_source">show</a>
+                        
+                        | <a href="http://github.com/dmathieu/jesus/blob/6e71ad615a9291bacddbe242dc3750203524007a/lib/jesus/server/helpers.rb#L14" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000007_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/jesus/server/helpers.rb, line 14</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flash</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-identifier">session</span>[<span class="ruby-identifier">type</span>] = <span class="ruby-identifier">message</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000006">
+                    
+                    <a name="M000006"></a><b>flash_tag</b>(type)
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000006_source')" id="l_M000006_source">show</a>
+                        
+                        | <a href="http://github.com/dmathieu/jesus/blob/6e71ad615a9291bacddbe242dc3750203524007a/lib/jesus/server/helpers.rb#L11" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000006_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/jesus/server/helpers.rb, line 11</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flash_tag</span>(<span class="ruby-identifier">type</span>)
+      <span class="ruby-node">&quot;&lt;div id='flash'&gt;#{session.delete(type)}&lt;/div&gt;&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">session</span>[<span class="ruby-identifier">type</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000005">
+                    
+                    <a name="M000005"></a><b>tab</b>(name, link)
+                    
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000005_source')" id="l_M000005_source">show</a>
+                        
+                        | <a href="http://github.com/dmathieu/jesus/blob/6e71ad615a9291bacddbe242dc3750203524007a/lib/jesus/server/helpers.rb#L7" target="_blank" class="github_url">on GitHub</a>
+                        
+                    </p>
+                    <div id="M000005_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/jesus/server/helpers.rb, line 7</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tab</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">link</span>)
+      <span class="ruby-node">&quot;&lt;li #{class_if_current(link)}&gt;&lt;a href='#{link}'&gt;#{name}&lt;/a&gt;&lt;/li&gt;&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+</div>
+    </div>
+  </body>
+</html>    
