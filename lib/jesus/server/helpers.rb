@@ -14,5 +14,10 @@ module Jesus
     def flash(type, message)
       session[type] = message
     end
+    
+    
+    def show(page, layout = true)
+      erb page.to_sym, {:layout => layout}
+    end
   end
 end

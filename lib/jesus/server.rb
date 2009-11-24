@@ -1,12 +1,10 @@
 require 'sinatra/base'
-require 'sinatra_more/render_plugin'
 require 'jesus/interface'
 require 'jesus/server/helpers'
 
 module Jesus
   class Server < Sinatra::Base
     dir = File.dirname(File.expand_path(__FILE__))
-    register SinatraMore::RenderPlugin
     include Jesus::Helpers
     
     set :views, "#{dir}/server/views"
@@ -20,7 +18,7 @@ module Jesus
     #
     get '/' do
       @status = Jesus::Interface.new.status
-      erb_template @status.nil? ? :error : :home
+      show @status.nil? ? :error : :home
     end
     
     #
@@ -28,7 +26,7 @@ module Jesus
     #
     get '/logs/:process' do
       @log = Jesus::Interface.new.log(params[:process])
-      erb_template @log.nil? ? :error : :log
+      show @log.nil? ? :error : :log
     end
     
     #

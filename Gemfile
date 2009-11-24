@@ -3,7 +3,6 @@ source "http://gemcutter.org"
 # Required on every environment
 #
 gem "sinatra"
-gem "sinatra_more"
 gem "god"
 
 #
