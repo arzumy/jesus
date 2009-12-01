@@ -19,5 +19,15 @@ module Jesus
     def show(page, layout = true)
       erb page.to_sym, {:layout => layout}
     end
+    
+    def process_action(process)
+      case process[1][:state]
+        when :up
+          return '<li><a href="/command/stop/' + process[0] + '">Stop Process</a></li>' +
+                  '<li><a href="/command/restart/' + process[0] + '">Restart Process</a></li>'
+      when :unmonitored
+          return '<li><a href="/command/start/' + process[0] + '">Start Process</a></li>'
+      end
+    end
   end
 end

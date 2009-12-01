@@ -40,8 +40,9 @@ module Jesus
     #
     # Executes a command (start, restart, stop, quit or terminate) on the server
     #
-    post '/command/:command/:process' do
+    get '/command/:command/:process' do
       @command = Jesus::Interface.new.command(params[:command], params[:process])
+      flash(:notice, 'The command ' + params[:command] + ' has successfully been executed. It might take a few seconds before the status process effectively changes.')
       redirect '/'
     end
   end
