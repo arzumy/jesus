@@ -21,7 +21,7 @@ describe "The home page" do
   end
   
   it 'should execute the command' do
-    post '/command/start/jesus'
+    get '/command/start/jesus'
     last_response.should be_redirect
   end
 end
