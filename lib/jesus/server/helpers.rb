@@ -14,6 +14,9 @@ module Jesus
     def flash(type, message)
       session[type] = message
     end
+    def confirm(message='Are you sure you want to do this ?')
+      return "javascript:return confirm('" + message + "');"
+    end
     
     
     def show(page, layout = true)
@@ -23,8 +26,8 @@ module Jesus
     def process_action(process)
       case process[1][:state]
         when :up
-          return '<li><a href="/command/stop/' + process[0] + '">Stop Process</a></li>' +
-                  '<li><a href="/command/restart/' + process[0] + '">Restart Process</a></li>'
+          return '<li><a href="/command/stop/' + process[0] + '" onclick="' + confirm + '">Stop Process</a></li>' +
+                  '<li><a href="/command/restart/' + process[0] + '" onclick="' + confirm + '">Restart Process</a></li>'
       when :unmonitored
           return '<li><a href="/command/start/' + process[0] + '">Start Process</a></li>'
       end
