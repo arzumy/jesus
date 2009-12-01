@@ -13,7 +13,7 @@ begin
     gemspec.email = "42@dmathieu.com"
     gemspec.homepage = "http://github.com/dmathieu/jesus"
     gemspec.authors = ["Damien MATHIEU"]
-    gemspec.version = '0.0.2'
+    gemspec.version = '0.0.3'
   end
 rescue LoadError
   puts "Jeweler not available. Install it with:"
