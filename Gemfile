@@ -4,6 +4,7 @@ source "http://gemcutter.org"
 #
 gem "sinatra"
 gem "god"
+gem "json"
 
 #
 # Required only for tests

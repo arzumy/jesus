@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'jesus/interface'
 require 'jesus/server/helpers'
+require 'json'
 
 module Jesus
   class Server < Sinatra::Base
@@ -44,6 +45,13 @@ module Jesus
       @command = Jesus::Interface.new.command(params[:command], params[:process])
       flash(:notice, 'The command ' + params[:command] + ' has successfully been executed. It might take a few seconds before the status process effectively changes.')
       redirect '/'
+    end
+    
+    #
+    # Displays every process and it's status in json format
+    #
+    get '/json' do
+      Jesus::Interface.new.status.to_json
     end
   end
 end

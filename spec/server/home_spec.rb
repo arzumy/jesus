@@ -24,4 +24,9 @@ describe "The home page" do
     get '/command/start/jesus'
     last_response.should be_redirect
   end
+  
+  it 'should render the json page' do
+    get '/json'
+    last_response.should be_ok
+  end
 end
