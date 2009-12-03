@@ -11,7 +11,7 @@
 		<h2><%= group %></h2>
 		<ul>
 			<% processes.each do |process| %>
-				<li class="<%= process[1][:state] %>">
+				<li class="<%= process[1][:state] %>" id="<%= group %>-<%= process[0] %>">
             <%= process[0] %>
             
             <ul class="links">
@@ -21,5 +21,7 @@
         </li>
 			<% end %>
 		</ul>
-	</div>
+  </div>
 <% end %>
+
+<div id="automatic_update">Not automatically updated yet</div>
