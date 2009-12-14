@@ -45,7 +45,9 @@ To do so, you can :
 
 And that's it! We'll soon take a look at your issue and review your changes.
 
-Author
-------
+Author and Credits
+------------------
 
 Damien MATHIEU :: 42 (AT|CHEZ) dmathieu.com
+
+The interface's design is freely inspired by [resque](http://github.com/defunkt/resque)'s web interface.
