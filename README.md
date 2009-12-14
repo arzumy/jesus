@@ -9,7 +9,7 @@ It allows you to see the process and monitor/unmonitor them.
 Installation
 ------------
 
-To install the application you first need to have "bundler":http://github.com/wycats/bundler installed on your machine.
+To install the application you first need to have [bundler](http://github.com/wycats/bundler) installed on your machine.
 Once that is done, clone the project in the directory of your choice.
 
     git clone git://github.com/dmathieu/jesus.git
