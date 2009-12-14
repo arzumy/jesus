@@ -30,7 +30,7 @@ And start Jesus.
 
 Note: Jesus and God should be started with the same user. Otherwise, Jesus won't be able to get access to the God informations.
 
-Go to [localhot:9292](http://localhost:9292) to watch the process monitored by god.
+Go to [localhost:9292](http://localhost:9292) to watch the process monitored by god.
 
 Contributing
 ------------
