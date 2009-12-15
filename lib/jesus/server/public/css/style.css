@@ -10,6 +10,7 @@ body {
 	padding:0;
 	margin:0;
 }
+img { border: 0px; }
 
 /*
 * The page header
@@ -100,8 +101,12 @@ div.group ul {
 }
 div.group li {
 	border: 1px solid #CCC;
-	margin: 5px 0px;
-	padding: 10px;
+  height: 35px;
+}
+div.group li span.process {
+    margin: 10px;
+    display: block;
+    float: left;
 }
 
 div.group li.up { background-color: #BFFFC8; }
@@ -109,14 +114,14 @@ div.group li.unmonitored { background-color: #FFBFBF; }
 
 ul.links {
     list-style-type: none;
-    margin: 0px;
+    margin: 5px;
     float: right;
 }
 ul.links li {
     display: inline;
     border: 0px;
+    margin: 0px 10px;
 }
-
 
 /*
  * The logs page

@@ -12,11 +12,11 @@
 		<ul>
 			<% processes.each do |process| %>
 				<li class="<%= process[1][:state] %>" id="<%= group %>-<%= process[0] %>">
-            <%= process[0] %>
+            <span class="process"><%= process[0] %></span>
             
             <ul class="links">
                 <%= process_action(process) %>
-                <li><a href="/logs/<%= process[0] %>">View Logs</a></li>
+                <li><a href="/logs/<%= process[0] %>"><img src="/img/logs.png" alt="View Logs" /></a></li>
             </ul>
         </li>
 			<% end %>
