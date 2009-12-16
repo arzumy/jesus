@@ -19,7 +19,7 @@
         </h1>
         <ul class="files">
             <li>lib/jesus/server/views/home.erb</li>
-            <li>Last modified: Tue Dec 01 13:22:08 +0100 2009</li>
+            <li>Last modified: Wed Dec 16 11:19:23 +0100 2009</li>
         </ul>
     </div>
 
@@ -48,20 +48,23 @@
                 &lt;h2&gt;&lt;%= group %&gt;&lt;/h2&gt;
                 &lt;ul&gt;
                         &lt;% processes.each do |process| %&gt;
-                                &lt;li class=&quot;&lt;%= process[1][:state] %&gt;&quot;&gt;
-            &lt;%= process[0] %&gt;
+                                &lt;li class=&quot;&lt;%= process[1][:state] %&gt;&quot; id=&quot;&lt;%= group %&gt;-&lt;%= process[0] %&gt;&quot;&gt;
+            &lt;span class=&quot;process&quot;&gt;&lt;%= process[0] %&gt;&lt;/span&gt;
 
             &lt;ul class=&quot;links&quot;&gt;
                 &lt;%= process_action(process) %&gt;
-                &lt;li&gt;&lt;a href=&quot;/logs/&lt;%= process[0] %&gt;&quot;&gt;View Logs&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/logs/&lt;%= process[0] %&gt;&quot;&gt;&lt;img src=&quot;/img/logs.png&quot; alt=&quot;View Logs&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
                         &lt;% end %&gt;
                 &lt;/ul&gt;
-        &lt;/div&gt;
+  &lt;/div&gt;
 </pre>
 <p>
 <% end %>
+</p>
+<p>
+<div id=&#8220;automatic_update&#8220;>Not automatically updated yet</div>
 </p>
 
     </div>
