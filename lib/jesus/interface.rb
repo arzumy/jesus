@@ -8,7 +8,7 @@ module Jesus
     attr_reader :server
     
     def initialize
-        @server = DRbObject.new(nil, God::Socket.socket(17165))
+        @server = DRbObject.new(nil, God::Socket.socket(Jesus.config('god_port')))
     end
     
     

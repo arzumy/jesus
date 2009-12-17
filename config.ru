@@ -7,6 +7,7 @@ require 'vendor/gems/environment'
 # We require the application
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 require 'jesus/server'
+require 'jesus/config'
 
 # We start the server
 use Rack::ShowExceptions
