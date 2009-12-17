@@ -6,6 +6,10 @@ module Jesus
     return '' if @config[name].nil?
     return @config[name]
   end
+  
+  def self.reset_config
+    @config = nil
+  end
     
   class Config
     def self.load_config
