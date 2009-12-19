@@ -116,6 +116,7 @@ ul.links {
     list-style-type: none;
     margin: 5px;
     float: right;
+   clear: right;
 }
 ul.links li {
     display: inline;
